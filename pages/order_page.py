@@ -16,12 +16,12 @@ class OrderPage(BasePage):
         self.set_text_to_element(OrderPageLocators.INPUT_FIELD_SURNAME, surname)
 
     def set_address(self):
-        address = generators.generate_address()
+        address = options.choice_address()
         self.set_text_to_element(OrderPageLocators.INPUT_FIELD_ADDRESS, address)
 
 
     def select_metro_station(self):
-        metro_station = options.choice__station()
+        metro_station = options.choice_station()
         self.click_on_element(OrderPageLocators.INPUT_FIELD_METRO_STATION)
         locator = self.reformate_locator(OrderPageLocators.STATION_DROP_DOWN, metro_station)
         self.click_on_element(locator)
@@ -48,7 +48,7 @@ class OrderPage(BasePage):
         self.click_on_element(OrderPageLocators.TITLE)
 
     def select_rental_period(self):
-        rental_period = options.choice__rental_period()
+        rental_period = options.choice_rental_period()
         self.click_on_element(OrderPageLocators.RENTAL_PERIOD_DD)
         locator = self.reformate_locator(OrderPageLocators.RENTAL_PERIOD_BUTTON_IN_DD, rental_period)
         self.click_on_element(locator)

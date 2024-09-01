@@ -12,6 +12,6 @@ class TestLogoYandex:
 
     def test_click_on_scooter_logo_and_open_home_page(self, home_page, order_page):
         home_page.get_url(Urls.HOME_PAGE_URL)
-        home_page.click_on_order_button(HomePageLocators.ORDER_BUTTON_IN_HEADER)
+        home_page.click_on_order_button(HomePageLocators.ORDER_BUTTON_UP)
         order_page.click_on_logo_scooter()
         assert home_page.get_current_url() == Urls.HOME_PAGE_URL

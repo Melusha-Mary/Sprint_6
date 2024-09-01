@@ -6,8 +6,8 @@ class TestOrderPage:
 
     @pytest.mark.parametrize('button, date',
                              [
-                                 [HomePageLocators.ORDER_BUTTON_UP, '29.08.2024'],
-                                 [HomePageLocators.ORDER_BUTTON_DOWN, '23.09.2024']
+                                 [HomePageLocators.ORDER_BUTTON_UP, '02.09.2024'],
+                                 [HomePageLocators.ORDER_BUTTON_DOWN, '07.10.2024']
                              ]
                              )
     def test_order_scooter(self, home_page, order_page, button, date):

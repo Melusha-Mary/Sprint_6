@@ -1,9 +1,11 @@
 import pytest
+import allure
 from locators.home_page_locators import HomePageLocators
 
 
 class TestOrderPage:
 
+    @allure.title('Тест "заказ самоката"')
     @pytest.mark.parametrize('button, date',
                              [
                                  [HomePageLocators.ORDER_BUTTON_UP, '02.09.2024'],

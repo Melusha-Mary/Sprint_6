@@ -1,8 +1,10 @@
 import pytest
+import allure
 from data import Answers
 
 
 class TestHomePage:
+    @allure.title('Тест "вопросы и ответы"')
     @pytest.mark.parametrize('question, answer',
                              [(0, Answers.ANSWER_0),
                               (1, Answers.ANSWER_1),
